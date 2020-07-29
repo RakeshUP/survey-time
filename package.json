@@ -24,6 +24,6 @@
   "scripts": {
     "build": "babel src/ -d build",
     "start": "nodemon --exec babel-node src/index.js",
-    "start:prod": "yarn build && node dist/index.js"
+    "start:prod": "yarn build && node build/index.js"
   }
 }
