@@ -68,6 +68,7 @@ const getSurveyResult = ({ params: { surveyId } }, res) => {
     surveyId,
     (err, rows) => {
       if (err === null) {
+        // not transforming the rows for response - send as it is in db
         res.send(rows);
       } else {
         res.send(`Error occurred, ${err}`);
