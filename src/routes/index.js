@@ -7,7 +7,9 @@ import { isAuthenticated } from '../middlewares';
 
 const router = express.Router();
 router.use('/', user);
-router.use('/survey', isAuthenticated, survey);
 router.use('/thumbnail', thumbnail);
+// all the following routes are protected by the isAuthenticated middleware
+// which responds with HTTP 401 when there is no authToken
+router.use('/survey', isAuthenticated, survey);
 
 export default router;

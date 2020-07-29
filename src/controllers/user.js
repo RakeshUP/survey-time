@@ -12,6 +12,7 @@ const createAuthToken = (req, res, next) => {
     iat: Date.now(),
   };
   try {
+    // create a JWT token and set it in cookie
     const jwtToken = jwt.sign(jwtTokenObject, JWT_SECRET, { expiresIn: '1 day' });
     res.cookie('authToken', jwtToken, { httpOnly: true, maxAge: 86400000, domain: req.headers.domain });
     res.send({ jwtToken });
