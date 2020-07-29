@@ -23,7 +23,8 @@
   },
   "scripts": {
     "build": "babel src/ -d build",
-    "start": "nodemon --exec babel-node src/index.js",
-    "start:prod": "yarn build && node build/index.js"
+    "start:dev": "nodemon --exec babel-node src/index.js",
+    "start:prod": "yarn build && yarn start",
+    "start": "node build/index.js"
   }
 }
