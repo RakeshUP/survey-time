@@ -27,3 +27,8 @@ The app is hosted in Heroku and can be accessed on https://survey-time-rakesh.he
 The postman collection for all REST API endpoints is available on https://www.getpostman.com/collections/ec0393b5a19e63281ad0
 
 The postman docs is available on https://documenter.getpostman.com/view/2954336/T1DtcupN
+
+
+## JWT Authentication
+
+The authToken is stored as a cookie. If you delete the cookie and call the REST APIs, you will get authentication error.
